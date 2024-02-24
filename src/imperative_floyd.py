@@ -15,7 +15,6 @@ def floyd(distance):
     A simple implementation of Floyd's algorithm
     """
     MAX_LENGTH = len(distance)
-    print(range(MAX_LENGTH))
     for intermediate, start_node,end_node in itertools.product (range(MAX_LENGTH),range(MAX_LENGTH), range(MAX_LENGTH)):
         #print (intermediate,start_node,end_node)
         # Assume that if start_node and end_node are the same
