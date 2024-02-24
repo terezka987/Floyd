@@ -88,9 +88,7 @@ recursive_times[8] = f'{time:.20f}'
 time = timeit.timeit(lambda: recursive_floyd.recursive_floyd(graph_10), number= 1)
 recursive_times[10] = f'{time:.20f}'
 
-
+print 'imperative_times'
 print(imperative_times)
+print 'recursive_times'
 print(recursive_times)
-
-# import cProfile
-# cProfile.run("imperative_floyd.floyd(graph_4)")
