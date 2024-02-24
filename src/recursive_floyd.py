@@ -10,13 +10,13 @@ graph = [[0, 7, NO_PATH, 8],
 [NO_PATH, NO_PATH, 0, 2],
 [NO_PATH, NO_PATH, NO_PATH, 0]]
 
-MAX_LENGTH = len(graph[0])
+# MAX_LENGTH = len(graph)
 def recursive_floyd(distance):
     """
     Recursive implementation of Floyd's algorithm
     """
+    MAX_LENGTH = len(distance)
     def return_min(start_node, end_node, intermediate):
-        #print(start_node,end_node,intermediate)
         if intermediate < 0:
             return distance[start_node][end_node]
         return min(
@@ -27,6 +27,4 @@ def recursive_floyd(distance):
         for end_node in range(MAX_LENGTH):
             for intermediate in range(MAX_LENGTH):
                 distance[start_node][end_node] = return_min(start_node, end_node, intermediate)
-    pp.pprint(distance)
-pp.pprint(graph)
 recursive_floyd(graph)
