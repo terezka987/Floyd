@@ -10,7 +10,6 @@ graph = [[0, 7, NO_PATH, 8],
 [NO_PATH, NO_PATH, 0, 2],
 [NO_PATH, NO_PATH, NO_PATH, 0]]
 
-# MAX_LENGTH = len(graph)
 def recursive_floyd(distance):
     """
     Recursive implementation of Floyd's algorithm
